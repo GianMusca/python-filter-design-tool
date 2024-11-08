@@ -1,0 +1,1332 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>Form</class>
+ <widget class="QWidget" name="Form">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>1081</width>
+    <height>752</height>
+   </rect>
+  </property>
+  <property name="windowTitle">
+   <string>Form</string>
+  </property>
+  <layout class="QVBoxLayout" name="verticalLayout">
+   <item>
+    <widget class="QTabWidget" name="tabWidget_main">
+     <property name="currentIndex">
+      <number>1</number>
+     </property>
+     <widget class="QWidget" name="tab_FilterMaker">
+      <attribute name="title">
+       <string>Filter Maker</string>
+      </attribute>
+      <layout class="QHBoxLayout" name="horizontalLayout">
+       <item>
+        <layout class="QVBoxLayout" name="verticalLayout_2">
+         <property name="sizeConstraint">
+          <enum>QLayout::SetDefaultConstraint</enum>
+         </property>
+         <item>
+          <widget class="QLineEdit" name="lineEdit">
+           <property name="maximumSize">
+            <size>
+             <width>200</width>
+             <height>16777215</height>
+            </size>
+           </property>
+           <property name="text">
+            <string/>
+           </property>
+           <property name="placeholderText">
+            <string>NAME</string>
+           </property>
+          </widget>
+         </item>
+         <item>
+          <widget class="QLabel" name="label">
+           <property name="maximumSize">
+            <size>
+             <width>200</width>
+             <height>16777215</height>
+            </size>
+           </property>
+           <property name="text">
+            <string>FILTER TYPE</string>
+           </property>
+          </widget>
+         </item>
+         <item>
+          <widget class="QComboBox" name="comboBox">
+           <property name="maximumSize">
+            <size>
+             <width>200</width>
+             <height>16777215</height>
+            </size>
+           </property>
+           <property name="editable">
+            <bool>false</bool>
+           </property>
+           <item>
+            <property name="text">
+             <string>Low Pass</string>
+            </property>
+           </item>
+           <item>
+            <property name="text">
+             <string>High Pass</string>
+            </property>
+           </item>
+           <item>
+            <property name="text">
+             <string>Band Pass</string>
+            </property>
+           </item>
+           <item>
+            <property name="text">
+             <string>Band Stop</string>
+            </property>
+           </item>
+           <item>
+            <property name="text">
+             <string>Group Delay</string>
+            </property>
+           </item>
+          </widget>
+         </item>
+         <item>
+          <widget class="QLabel" name="label_2">
+           <property name="maximumSize">
+            <size>
+             <width>200</width>
+             <height>16777215</height>
+            </size>
+           </property>
+           <property name="text">
+            <string>APPROXIMATION</string>
+           </property>
+          </widget>
+         </item>
+         <item>
+          <widget class="QComboBox" name="comboBox_2">
+           <property name="maximumSize">
+            <size>
+             <width>200</width>
+             <height>16777215</height>
+            </size>
+           </property>
+           <item>
+            <property name="text">
+             <string>Legendre</string>
+            </property>
+           </item>
+           <item>
+            <property name="text">
+             <string>Gauss</string>
+            </property>
+           </item>
+           <item>
+            <property name="text">
+             <string>Butterworth</string>
+            </property>
+           </item>
+          </widget>
+         </item>
+         <item>
+          <widget class="QLabel" name="label_3">
+           <property name="maximumSize">
+            <size>
+             <width>200</width>
+             <height>16777215</height>
+            </size>
+           </property>
+           <property name="text">
+            <string>PARAMETERS</string>
+           </property>
+          </widget>
+         </item>
+         <item>
+          <layout class="QGridLayout" name="gridLayout">
+           <item row="1" column="1">
+            <widget class="QDoubleSpinBox" name="doubleSpinBox_Aa">
+             <property name="maximumSize">
+              <size>
+               <width>130</width>
+               <height>16777215</height>
+              </size>
+             </property>
+             <property name="minimum">
+              <double>-1000.000000000000000</double>
+             </property>
+             <property name="maximum">
+              <double>1000.000000000000000</double>
+             </property>
+             <property name="value">
+              <double>40.000000000000000</double>
+             </property>
+            </widget>
+           </item>
+           <item row="4" column="0">
+            <widget class="QLabel" name="label_8">
+             <property name="maximumSize">
+              <size>
+               <width>70</width>
+               <height>16777215</height>
+              </size>
+             </property>
+             <property name="text">
+              <string>fp- [Hz]</string>
+             </property>
+            </widget>
+           </item>
+           <item row="5" column="1">
+            <widget class="QDoubleSpinBox" name="doubleSpinBox_fa_plus">
+             <property name="maximumSize">
+              <size>
+               <width>130</width>
+               <height>16777215</height>
+              </size>
+             </property>
+             <property name="maximum">
+              <double>10000000000.000000000000000</double>
+             </property>
+             <property name="value">
+              <double>45000.000000000000000</double>
+             </property>
+            </widget>
+           </item>
+           <item row="2" column="0">
+            <widget class="QLabel" name="label_6">
+             <property name="maximumSize">
+              <size>
+               <width>70</width>
+               <height>16777215</height>
+              </size>
+             </property>
+             <property name="text">
+              <string>Ap [dB]</string>
+             </property>
+            </widget>
+           </item>
+           <item row="0" column="1">
+            <widget class="QDoubleSpinBox" name="doubleSpinBox_Gain">
+             <property name="maximumSize">
+              <size>
+               <width>130</width>
+               <height>16777215</height>
+              </size>
+             </property>
+             <property name="minimum">
+              <double>-1000.000000000000000</double>
+             </property>
+             <property name="maximum">
+              <double>1000.000000000000000</double>
+             </property>
+            </widget>
+           </item>
+           <item row="3" column="1">
+            <widget class="QDoubleSpinBox" name="doubleSpinBox_fa_minus">
+             <property name="maximumSize">
+              <size>
+               <width>130</width>
+               <height>16777215</height>
+              </size>
+             </property>
+             <property name="maximum">
+              <double>10000000000.000000000000000</double>
+             </property>
+             <property name="value">
+              <double>2000.000000000000000</double>
+             </property>
+            </widget>
+           </item>
+           <item row="0" column="0">
+            <widget class="QLabel" name="label_4">
+             <property name="maximumSize">
+              <size>
+               <width>70</width>
+               <height>16777215</height>
+              </size>
+             </property>
+             <property name="text">
+              <string>Gain [dB]</string>
+             </property>
+            </widget>
+           </item>
+           <item row="3" column="0">
+            <widget class="QLabel" name="label_7">
+             <property name="maximumSize">
+              <size>
+               <width>70</width>
+               <height>16777215</height>
+              </size>
+             </property>
+             <property name="text">
+              <string>fa- [Hz]</string>
+             </property>
+            </widget>
+           </item>
+           <item row="6" column="0">
+            <widget class="QLabel" name="label_10">
+             <property name="maximumSize">
+              <size>
+               <width>70</width>
+               <height>16777215</height>
+              </size>
+             </property>
+             <property name="text">
+              <string>fp+ [Hz]</string>
+             </property>
+            </widget>
+           </item>
+           <item row="5" column="0">
+            <widget class="QLabel" name="label_9">
+             <property name="maximumSize">
+              <size>
+               <width>70</width>
+               <height>16777215</height>
+              </size>
+             </property>
+             <property name="text">
+              <string>fa+ [Hz]</string>
+             </property>
+            </widget>
+           </item>
+           <item row="2" column="1">
+            <widget class="QDoubleSpinBox" name="doubleSpinBox_Ap">
+             <property name="maximumSize">
+              <size>
+               <width>130</width>
+               <height>16777215</height>
+              </size>
+             </property>
+             <property name="minimum">
+              <double>-1000.000000000000000</double>
+             </property>
+             <property name="value">
+              <double>5.000000000000000</double>
+             </property>
+            </widget>
+           </item>
+           <item row="4" column="1">
+            <widget class="QDoubleSpinBox" name="doubleSpinBox_fp_minus">
+             <property name="maximumSize">
+              <size>
+               <width>130</width>
+               <height>16777215</height>
+              </size>
+             </property>
+             <property name="maximum">
+              <double>10000000000.000000000000000</double>
+             </property>
+             <property name="value">
+              <double>3000.000000000000000</double>
+             </property>
+            </widget>
+           </item>
+           <item row="1" column="0">
+            <widget class="QLabel" name="label_5">
+             <property name="maximumSize">
+              <size>
+               <width>70</width>
+               <height>16777215</height>
+              </size>
+             </property>
+             <property name="text">
+              <string>Aa [dB]</string>
+             </property>
+            </widget>
+           </item>
+           <item row="6" column="1">
+            <widget class="QDoubleSpinBox" name="doubleSpinBox_fp_plus">
+             <property name="maximumSize">
+              <size>
+               <width>130</width>
+               <height>16777215</height>
+              </size>
+             </property>
+             <property name="maximum">
+              <double>10000000000.000000000000000</double>
+             </property>
+             <property name="value">
+              <double>30000.000000000000000</double>
+             </property>
+            </widget>
+           </item>
+          </layout>
+         </item>
+         <item>
+          <widget class="Line" name="line_2">
+           <property name="orientation">
+            <enum>Qt::Horizontal</enum>
+           </property>
+          </widget>
+         </item>
+         <item>
+          <spacer name="verticalSpacer">
+           <property name="orientation">
+            <enum>Qt::Vertical</enum>
+           </property>
+           <property name="sizeHint" stdset="0">
+            <size>
+             <width>20</width>
+             <height>40</height>
+            </size>
+           </property>
+          </spacer>
+         </item>
+         <item>
+          <layout class="QGridLayout" name="gridLayout_2">
+           <item row="0" column="1">
+            <widget class="QDoubleSpinBox" name="doubleSpinBox_denorm">
+             <property name="maximumSize">
+              <size>
+               <width>150</width>
+               <height>16777215</height>
+              </size>
+             </property>
+             <property name="decimals">
+              <number>3</number>
+             </property>
+             <property name="maximum">
+              <double>100.000000000000000</double>
+             </property>
+            </widget>
+           </item>
+           <item row="3" column="0">
+            <widget class="QLabel" name="label_14">
+             <property name="text">
+              <string>Q max</string>
+             </property>
+            </widget>
+           </item>
+           <item row="2" column="0">
+            <widget class="QLabel" name="label_13">
+             <property name="text">
+              <string>N max</string>
+             </property>
+            </widget>
+           </item>
+           <item row="3" column="1">
+            <widget class="QDoubleSpinBox" name="doubleSpinBox_Qmax">
+             <property name="maximum">
+              <double>1000.000000000000000</double>
+             </property>
+             <property name="value">
+              <double>10.000000000000000</double>
+             </property>
+            </widget>
+           </item>
+           <item row="1" column="0">
+            <widget class="QLabel" name="label_12">
+             <property name="text">
+              <string>N min</string>
+             </property>
+            </widget>
+           </item>
+           <item row="0" column="0">
+            <widget class="QLabel" name="label_11">
+             <property name="maximumSize">
+              <size>
+               <width>55</width>
+               <height>16777215</height>
+              </size>
+             </property>
+             <property name="text">
+              <string>Denorm. </string>
+             </property>
+            </widget>
+           </item>
+           <item row="1" column="2">
+            <widget class="QCheckBox" name="checkBox_Nmin">
+             <property name="enabled">
+              <bool>true</bool>
+             </property>
+             <property name="minimumSize">
+              <size>
+               <width>0</width>
+               <height>0</height>
+              </size>
+             </property>
+             <property name="maximumSize">
+              <size>
+               <width>16</width>
+               <height>16777215</height>
+              </size>
+             </property>
+             <property name="text">
+              <string/>
+             </property>
+            </widget>
+           </item>
+           <item row="2" column="2">
+            <widget class="QCheckBox" name="checkBox_Nmax">
+             <property name="enabled">
+              <bool>true</bool>
+             </property>
+             <property name="minimumSize">
+              <size>
+               <width>0</width>
+               <height>0</height>
+              </size>
+             </property>
+             <property name="maximumSize">
+              <size>
+               <width>16</width>
+               <height>16777215</height>
+              </size>
+             </property>
+             <property name="text">
+              <string/>
+             </property>
+            </widget>
+           </item>
+           <item row="3" column="2">
+            <widget class="QCheckBox" name="checkBox_Qmax">
+             <property name="enabled">
+              <bool>true</bool>
+             </property>
+             <property name="minimumSize">
+              <size>
+               <width>0</width>
+               <height>0</height>
+              </size>
+             </property>
+             <property name="maximumSize">
+              <size>
+               <width>16</width>
+               <height>16777215</height>
+              </size>
+             </property>
+             <property name="text">
+              <string/>
+             </property>
+            </widget>
+           </item>
+           <item row="1" column="1">
+            <widget class="QSpinBox" name="spinBox_Nmin">
+             <property name="minimum">
+              <number>1</number>
+             </property>
+            </widget>
+           </item>
+           <item row="2" column="1">
+            <widget class="QSpinBox" name="spinBox_Nmax">
+             <property name="minimum">
+              <number>1</number>
+             </property>
+             <property name="value">
+              <number>20</number>
+             </property>
+            </widget>
+           </item>
+          </layout>
+         </item>
+         <item>
+          <widget class="QPushButton" name="pushButton_createFilter">
+           <property name="maximumSize">
+            <size>
+             <width>200</width>
+             <height>16777215</height>
+            </size>
+           </property>
+           <property name="text">
+            <string>CREATE FILTER</string>
+           </property>
+          </widget>
+         </item>
+         <item>
+          <widget class="Line" name="line_3">
+           <property name="orientation">
+            <enum>Qt::Horizontal</enum>
+           </property>
+          </widget>
+         </item>
+         <item>
+          <widget class="QLabel" name="label_16">
+           <property name="maximumSize">
+            <size>
+             <width>200</width>
+             <height>16777215</height>
+            </size>
+           </property>
+           <property name="text">
+            <string>SELECTED FILTER</string>
+           </property>
+          </widget>
+         </item>
+         <item>
+          <widget class="QComboBox" name="comboBox_YourFilters1">
+           <property name="maximumSize">
+            <size>
+             <width>200</width>
+             <height>16777215</height>
+            </size>
+           </property>
+           <property name="placeholderText">
+            <string/>
+           </property>
+           <item>
+            <property name="text">
+             <string>Your Filters</string>
+            </property>
+           </item>
+          </widget>
+         </item>
+         <item>
+          <layout class="QHBoxLayout" name="horizontalLayout_4">
+           <item>
+            <widget class="QLabel" name="label_15">
+             <property name="maximumSize">
+              <size>
+               <width>150</width>
+               <height>16777215</height>
+              </size>
+             </property>
+             <property name="text">
+              <string>Visible?</string>
+             </property>
+            </widget>
+           </item>
+           <item>
+            <widget class="QCheckBox" name="checkBox_VisibleFilter">
+             <property name="enabled">
+              <bool>true</bool>
+             </property>
+             <property name="minimumSize">
+              <size>
+               <width>0</width>
+               <height>0</height>
+              </size>
+             </property>
+             <property name="maximumSize">
+              <size>
+               <width>16</width>
+               <height>16777215</height>
+              </size>
+             </property>
+             <property name="text">
+              <string/>
+             </property>
+            </widget>
+           </item>
+          </layout>
+         </item>
+         <item>
+          <widget class="QPushButton" name="pushButton_EraseFilter">
+           <property name="maximumSize">
+            <size>
+             <width>200</width>
+             <height>16777215</height>
+            </size>
+           </property>
+           <property name="text">
+            <string>Erase Filter</string>
+           </property>
+          </widget>
+         </item>
+        </layout>
+       </item>
+       <item>
+        <widget class="Line" name="line">
+         <property name="orientation">
+          <enum>Qt::Vertical</enum>
+         </property>
+        </widget>
+       </item>
+       <item>
+        <widget class="QTabWidget" name="tabWidget_FilterMakerGraphs">
+         <property name="currentIndex">
+          <number>0</number>
+         </property>
+         <widget class="QWidget" name="tab_Magnitude">
+          <attribute name="title">
+           <string>Magnitude</string>
+          </attribute>
+          <layout class="QVBoxLayout" name="verticalLayout_11">
+           <item>
+            <widget class="QStackedWidget" name="stackedWidget_Magnitude">
+             <widget class="QWidget" name="page_3"/>
+             <widget class="QWidget" name="page_4"/>
+            </widget>
+           </item>
+           <item>
+            <widget class="QFrame" name="frame_2">
+             <property name="minimumSize">
+              <size>
+               <width>0</width>
+               <height>60</height>
+              </size>
+             </property>
+             <property name="frameShape">
+              <enum>QFrame::StyledPanel</enum>
+             </property>
+             <property name="frameShadow">
+              <enum>QFrame::Raised</enum>
+             </property>
+             <layout class="QHBoxLayout" name="horizontalLayout_5">
+              <item>
+               <layout class="QHBoxLayout" name="horizontalLayout_Magnitude"/>
+              </item>
+             </layout>
+            </widget>
+           </item>
+          </layout>
+         </widget>
+         <widget class="QWidget" name="tab_Attenuation">
+          <attribute name="title">
+           <string>Attenuation</string>
+          </attribute>
+          <layout class="QVBoxLayout" name="verticalLayout_3">
+           <item>
+            <widget class="QStackedWidget" name="stackedWidget_Attenuation">
+             <widget class="QWidget" name="page"/>
+             <widget class="QWidget" name="page_2"/>
+            </widget>
+           </item>
+           <item>
+            <widget class="QFrame" name="frame">
+             <property name="minimumSize">
+              <size>
+               <width>0</width>
+               <height>60</height>
+              </size>
+             </property>
+             <property name="frameShape">
+              <enum>QFrame::StyledPanel</enum>
+             </property>
+             <property name="frameShadow">
+              <enum>QFrame::Raised</enum>
+             </property>
+             <layout class="QHBoxLayout" name="horizontalLayout_3">
+              <item>
+               <layout class="QHBoxLayout" name="horizontalLayout_Attenuation"/>
+              </item>
+             </layout>
+            </widget>
+           </item>
+          </layout>
+         </widget>
+         <widget class="QWidget" name="tab_NormalizedAttenuation">
+          <attribute name="title">
+           <string>Normalized Attenuation</string>
+          </attribute>
+          <layout class="QVBoxLayout" name="verticalLayout_4">
+           <item>
+            <widget class="QStackedWidget" name="stackedWidget_NormalizedAttenuation">
+             <widget class="QWidget" name="page_5"/>
+             <widget class="QWidget" name="page_6"/>
+            </widget>
+           </item>
+           <item>
+            <widget class="QFrame" name="frame_3">
+             <property name="minimumSize">
+              <size>
+               <width>0</width>
+               <height>60</height>
+              </size>
+             </property>
+             <property name="frameShape">
+              <enum>QFrame::StyledPanel</enum>
+             </property>
+             <property name="frameShadow">
+              <enum>QFrame::Raised</enum>
+             </property>
+             <layout class="QHBoxLayout" name="horizontalLayout_6">
+              <item>
+               <layout class="QHBoxLayout" name="horizontalLayout_NormalizedAttenuation"/>
+              </item>
+             </layout>
+            </widget>
+           </item>
+          </layout>
+         </widget>
+         <widget class="QWidget" name="tab_Phase">
+          <attribute name="title">
+           <string>Phase</string>
+          </attribute>
+          <layout class="QVBoxLayout" name="verticalLayout_5">
+           <item>
+            <widget class="QStackedWidget" name="stackedWidget_Phase">
+             <widget class="QWidget" name="page_7"/>
+             <widget class="QWidget" name="page_8"/>
+            </widget>
+           </item>
+           <item>
+            <widget class="QFrame" name="frame_4">
+             <property name="minimumSize">
+              <size>
+               <width>0</width>
+               <height>60</height>
+              </size>
+             </property>
+             <property name="frameShape">
+              <enum>QFrame::StyledPanel</enum>
+             </property>
+             <property name="frameShadow">
+              <enum>QFrame::Raised</enum>
+             </property>
+             <layout class="QHBoxLayout" name="horizontalLayout_8">
+              <item>
+               <layout class="QHBoxLayout" name="horizontalLayout_Phase"/>
+              </item>
+             </layout>
+            </widget>
+           </item>
+          </layout>
+         </widget>
+         <widget class="QWidget" name="tab_GroupDelay">
+          <attribute name="title">
+           <string>Group Delay</string>
+          </attribute>
+          <layout class="QVBoxLayout" name="verticalLayout_6">
+           <item>
+            <widget class="QStackedWidget" name="stackedWidget_GroupDelay">
+             <widget class="QWidget" name="page_9"/>
+             <widget class="QWidget" name="page_10"/>
+            </widget>
+           </item>
+           <item>
+            <widget class="QFrame" name="frame_5">
+             <property name="minimumSize">
+              <size>
+               <width>0</width>
+               <height>60</height>
+              </size>
+             </property>
+             <property name="frameShape">
+              <enum>QFrame::StyledPanel</enum>
+             </property>
+             <property name="frameShadow">
+              <enum>QFrame::Raised</enum>
+             </property>
+             <layout class="QHBoxLayout" name="horizontalLayout_10">
+              <item>
+               <layout class="QHBoxLayout" name="horizontalLayout_GroupDelay"/>
+              </item>
+             </layout>
+            </widget>
+           </item>
+          </layout>
+         </widget>
+         <widget class="QWidget" name="tab_ZerosAndPoles">
+          <attribute name="title">
+           <string>Zeros and Poles</string>
+          </attribute>
+          <layout class="QVBoxLayout" name="verticalLayout_7">
+           <item>
+            <widget class="QStackedWidget" name="stackedWidget_ZerosAndPoles">
+             <widget class="QWidget" name="page_11"/>
+             <widget class="QWidget" name="page_12"/>
+            </widget>
+           </item>
+           <item>
+            <widget class="QFrame" name="frame_6">
+             <property name="minimumSize">
+              <size>
+               <width>0</width>
+               <height>60</height>
+              </size>
+             </property>
+             <property name="frameShape">
+              <enum>QFrame::StyledPanel</enum>
+             </property>
+             <property name="frameShadow">
+              <enum>QFrame::Raised</enum>
+             </property>
+             <layout class="QHBoxLayout" name="horizontalLayout_12">
+              <item>
+               <layout class="QHBoxLayout" name="horizontalLayout_ZerosAndPoles"/>
+              </item>
+             </layout>
+            </widget>
+           </item>
+          </layout>
+         </widget>
+         <widget class="QWidget" name="tab_ImpulseResponse">
+          <attribute name="title">
+           <string>Impulse Response</string>
+          </attribute>
+          <layout class="QVBoxLayout" name="verticalLayout_8">
+           <item>
+            <widget class="QStackedWidget" name="stackedWidget_ImpulseResponse">
+             <widget class="QWidget" name="page_13"/>
+             <widget class="QWidget" name="page_14"/>
+            </widget>
+           </item>
+           <item>
+            <widget class="QFrame" name="frame_7">
+             <property name="minimumSize">
+              <size>
+               <width>0</width>
+               <height>60</height>
+              </size>
+             </property>
+             <property name="frameShape">
+              <enum>QFrame::StyledPanel</enum>
+             </property>
+             <property name="frameShadow">
+              <enum>QFrame::Raised</enum>
+             </property>
+             <layout class="QHBoxLayout" name="horizontalLayout_14">
+              <item>
+               <layout class="QHBoxLayout" name="horizontalLayout_ImpulseResponse"/>
+              </item>
+             </layout>
+            </widget>
+           </item>
+          </layout>
+         </widget>
+         <widget class="QWidget" name="tab_StepResponse">
+          <attribute name="title">
+           <string>Step Response</string>
+          </attribute>
+          <layout class="QVBoxLayout" name="verticalLayout_9">
+           <item>
+            <widget class="QStackedWidget" name="stackedWidget_StepResponse">
+             <widget class="QWidget" name="page_15"/>
+             <widget class="QWidget" name="page_16"/>
+            </widget>
+           </item>
+           <item>
+            <widget class="QFrame" name="frame_8">
+             <property name="minimumSize">
+              <size>
+               <width>0</width>
+               <height>60</height>
+              </size>
+             </property>
+             <property name="frameShape">
+              <enum>QFrame::StyledPanel</enum>
+             </property>
+             <property name="frameShadow">
+              <enum>QFrame::Raised</enum>
+             </property>
+             <layout class="QHBoxLayout" name="horizontalLayout_16">
+              <item>
+               <layout class="QHBoxLayout" name="horizontalLayout_StepResponse"/>
+              </item>
+             </layout>
+            </widget>
+           </item>
+          </layout>
+         </widget>
+         <widget class="QWidget" name="tab_Q">
+          <attribute name="title">
+           <string>Q</string>
+          </attribute>
+          <layout class="QVBoxLayout" name="verticalLayout_10">
+           <item>
+            <widget class="QStackedWidget" name="stackedWidget_Q">
+             <property name="currentIndex">
+              <number>0</number>
+             </property>
+             <widget class="QWidget" name="page_17"/>
+             <widget class="QWidget" name="page_18"/>
+            </widget>
+           </item>
+           <item>
+            <widget class="QFrame" name="frame_9">
+             <property name="minimumSize">
+              <size>
+               <width>0</width>
+               <height>60</height>
+              </size>
+             </property>
+             <property name="frameShape">
+              <enum>QFrame::StyledPanel</enum>
+             </property>
+             <property name="frameShadow">
+              <enum>QFrame::Raised</enum>
+             </property>
+             <layout class="QHBoxLayout" name="horizontalLayout_18">
+              <item>
+               <layout class="QHBoxLayout" name="horizontalLayout_Q"/>
+              </item>
+             </layout>
+            </widget>
+           </item>
+          </layout>
+         </widget>
+        </widget>
+       </item>
+      </layout>
+     </widget>
+     <widget class="QWidget" name="tab_Stages">
+      <attribute name="title">
+       <string>Stages</string>
+      </attribute>
+      <layout class="QHBoxLayout" name="horizontalLayout_9">
+       <item>
+        <layout class="QVBoxLayout" name="verticalLayout_13">
+         <item>
+          <widget class="QLabel" name="label_17">
+           <property name="maximumSize">
+            <size>
+             <width>200</width>
+             <height>16777215</height>
+            </size>
+           </property>
+           <property name="text">
+            <string>SELECTED FILTER</string>
+           </property>
+          </widget>
+         </item>
+         <item>
+          <widget class="QComboBox" name="comboBox_YourFilters2">
+           <property name="maximumSize">
+            <size>
+             <width>200</width>
+             <height>16777215</height>
+            </size>
+           </property>
+           <property name="placeholderText">
+            <string/>
+           </property>
+           <item>
+            <property name="text">
+             <string>Your Filters</string>
+            </property>
+           </item>
+          </widget>
+         </item>
+         <item>
+          <layout class="QHBoxLayout" name="horizontalLayout_13">
+           <item>
+            <widget class="QLabel" name="label_23">
+             <property name="maximumSize">
+              <size>
+               <width>150</width>
+               <height>16777215</height>
+              </size>
+             </property>
+             <property name="text">
+              <string>Visible?</string>
+             </property>
+            </widget>
+           </item>
+           <item>
+            <widget class="QCheckBox" name="checkBox_VisibleTotal">
+             <property name="enabled">
+              <bool>true</bool>
+             </property>
+             <property name="minimumSize">
+              <size>
+               <width>0</width>
+               <height>0</height>
+              </size>
+             </property>
+             <property name="maximumSize">
+              <size>
+               <width>16</width>
+               <height>16777215</height>
+              </size>
+             </property>
+             <property name="text">
+              <string/>
+             </property>
+            </widget>
+           </item>
+          </layout>
+         </item>
+         <item>
+          <widget class="QLabel" name="label_18">
+           <property name="maximumSize">
+            <size>
+             <width>200</width>
+             <height>16777215</height>
+            </size>
+           </property>
+           <property name="text">
+            <string>SELECTED STAGE</string>
+           </property>
+          </widget>
+         </item>
+         <item>
+          <widget class="QComboBox" name="comboBox_StagesAvailable">
+           <property name="maximumSize">
+            <size>
+             <width>200</width>
+             <height>16777215</height>
+            </size>
+           </property>
+           <property name="placeholderText">
+            <string/>
+           </property>
+           <item>
+            <property name="text">
+             <string>Stages</string>
+            </property>
+           </item>
+          </widget>
+         </item>
+         <item>
+          <layout class="QHBoxLayout" name="horizontalLayout_11">
+           <item>
+            <widget class="QLabel" name="label_21">
+             <property name="maximumSize">
+              <size>
+               <width>150</width>
+               <height>16777215</height>
+              </size>
+             </property>
+             <property name="text">
+              <string>Visible?</string>
+             </property>
+            </widget>
+           </item>
+           <item>
+            <widget class="QCheckBox" name="checkBox_VisibleStage">
+             <property name="enabled">
+              <bool>true</bool>
+             </property>
+             <property name="minimumSize">
+              <size>
+               <width>0</width>
+               <height>0</height>
+              </size>
+             </property>
+             <property name="maximumSize">
+              <size>
+               <width>16</width>
+               <height>16777215</height>
+              </size>
+             </property>
+             <property name="text">
+              <string/>
+             </property>
+            </widget>
+           </item>
+          </layout>
+         </item>
+         <item>
+          <widget class="QPushButton" name="pushButton_stageShowAll">
+           <property name="maximumSize">
+            <size>
+             <width>200</width>
+             <height>16777215</height>
+            </size>
+           </property>
+           <property name="text">
+            <string>SHOW ALL</string>
+           </property>
+          </widget>
+         </item>
+         <item>
+          <widget class="QPushButton" name="pushButton_stageHideAll">
+           <property name="text">
+            <string>HIDE ALL</string>
+           </property>
+          </widget>
+         </item>
+         <item>
+          <spacer name="verticalSpacer_2">
+           <property name="orientation">
+            <enum>Qt::Vertical</enum>
+           </property>
+           <property name="sizeHint" stdset="0">
+            <size>
+             <width>20</width>
+             <height>40</height>
+            </size>
+           </property>
+          </spacer>
+         </item>
+         <item>
+          <layout class="QGridLayout" name="gridLayout_3">
+           <item row="0" column="1">
+            <widget class="QLabel" name="label_StageOrder">
+             <property name="maximumSize">
+              <size>
+               <width>130</width>
+               <height>16777215</height>
+              </size>
+             </property>
+             <property name="text">
+              <string/>
+             </property>
+            </widget>
+           </item>
+           <item row="2" column="1">
+            <widget class="QDoubleSpinBox" name="doubleSpinBox_stage_fo">
+             <property name="maximumSize">
+              <size>
+               <width>130</width>
+               <height>16777215</height>
+              </size>
+             </property>
+             <property name="decimals">
+              <number>4</number>
+             </property>
+             <property name="maximum">
+              <double>10000000000.000000000000000</double>
+             </property>
+             <property name="value">
+              <double>0.000000000000000</double>
+             </property>
+            </widget>
+           </item>
+           <item row="2" column="0">
+            <widget class="QLabel" name="label_20">
+             <property name="maximumSize">
+              <size>
+               <width>70</width>
+               <height>16777215</height>
+              </size>
+             </property>
+             <property name="text">
+              <string>fo [Hz]</string>
+             </property>
+            </widget>
+           </item>
+           <item row="1" column="0">
+            <widget class="QLabel" name="label_19">
+             <property name="maximumSize">
+              <size>
+               <width>70</width>
+               <height>16777215</height>
+              </size>
+             </property>
+             <property name="text">
+              <string>Gain [dB]</string>
+             </property>
+            </widget>
+           </item>
+           <item row="1" column="1">
+            <widget class="QDoubleSpinBox" name="doubleSpinBox_StageGain">
+             <property name="maximumSize">
+              <size>
+               <width>130</width>
+               <height>16777215</height>
+              </size>
+             </property>
+             <property name="decimals">
+              <number>4</number>
+             </property>
+             <property name="minimum">
+              <double>-1000.000000000000000</double>
+             </property>
+             <property name="maximum">
+              <double>1000.000000000000000</double>
+             </property>
+            </widget>
+           </item>
+           <item row="0" column="0">
+            <widget class="QLabel" name="label_22">
+             <property name="maximumSize">
+              <size>
+               <width>70</width>
+               <height>16777215</height>
+              </size>
+             </property>
+             <property name="text">
+              <string>Order</string>
+             </property>
+            </widget>
+           </item>
+           <item row="3" column="0">
+            <widget class="QLabel" name="label_24">
+             <property name="text">
+              <string>Q</string>
+             </property>
+            </widget>
+           </item>
+           <item row="3" column="1">
+            <widget class="QDoubleSpinBox" name="doubleSpinBox_stageQ">
+             <property name="decimals">
+              <number>4</number>
+             </property>
+             <property name="maximum">
+              <double>1000.000000000000000</double>
+             </property>
+             <property name="value">
+              <double>0.000000000000000</double>
+             </property>
+            </widget>
+           </item>
+          </layout>
+         </item>
+         <item>
+          <layout class="QHBoxLayout" name="horizontalLayout_15">
+           <item>
+            <widget class="QPushButton" name="pushButton_StageGetData">
+             <property name="maximumSize">
+              <size>
+               <width>100</width>
+               <height>16777215</height>
+              </size>
+             </property>
+             <property name="text">
+              <string>GET DATA</string>
+             </property>
+            </widget>
+           </item>
+           <item>
+            <widget class="QPushButton" name="pushButton_StageSetData">
+             <property name="maximumSize">
+              <size>
+               <width>100</width>
+               <height>16777215</height>
+              </size>
+             </property>
+             <property name="text">
+              <string>SET DATA</string>
+             </property>
+            </widget>
+           </item>
+          </layout>
+         </item>
+        </layout>
+       </item>
+       <item>
+        <layout class="QHBoxLayout" name="horizontalLayout_Magnitude_2"/>
+       </item>
+       <item>
+        <widget class="Line" name="line_4">
+         <property name="orientation">
+          <enum>Qt::Vertical</enum>
+         </property>
+        </widget>
+       </item>
+       <item>
+        <layout class="QVBoxLayout" name="verticalLayout_12">
+         <item>
+          <widget class="QStackedWidget" name="stackedWidget_Stages">
+           <widget class="QWidget" name="page_19"/>
+           <widget class="QWidget" name="page_20"/>
+          </widget>
+         </item>
+         <item>
+          <widget class="QFrame" name="frame_10">
+           <property name="minimumSize">
+            <size>
+             <width>0</width>
+             <height>60</height>
+            </size>
+           </property>
+           <property name="frameShape">
+            <enum>QFrame::StyledPanel</enum>
+           </property>
+           <property name="frameShadow">
+            <enum>QFrame::Raised</enum>
+           </property>
+           <layout class="QHBoxLayout" name="horizontalLayout_7">
+            <item>
+             <layout class="QHBoxLayout" name="horizontalLayout_Stages"/>
+            </item>
+           </layout>
+          </widget>
+         </item>
+        </layout>
+       </item>
+      </layout>
+     </widget>
+    </widget>
+   </item>
+  </layout>
+ </widget>
+ <resources/>
+ <connections/>
+</ui>
